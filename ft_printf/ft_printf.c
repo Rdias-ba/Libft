@@ -6,13 +6,13 @@
 /*   By: rdias-ba <rdias-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:13 by rdias-ba          #+#    #+#             */
-/*   Updated: 2023/02/01 15:01:57 by rdias-ba         ###   ########.fr       */
+/*   Updated: 2023/02/24 15:23:32 by rdias-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
-const char	*check_arg(va_list arg, const char *format, t_len *len)
+static const char	*check_arg(va_list arg, const char *format, t_len *len)
 {
 	if (*format == 'c')
 		arg_c(arg, len);
@@ -35,12 +35,12 @@ const char	*check_arg(va_list arg, const char *format, t_len *len)
 	return (++format);
 }
 
-const char	*write_text(const char *format, t_len *len)
+static const char	*write_text(const char *format, t_len *len)
 {
 	char	*befor_arg;
 	int		temp;
 
-	befor_arg = ft_strchr(format);
+	befor_arg = ft_strchr(format, '%');
 	if (befor_arg)
 		temp = ft_strlen(format) - ft_strlen(befor_arg);
 	else
@@ -75,19 +75,18 @@ int	ft_printf(const char *format, ...)
 	va_end(arg);
 	return (len.total);
 }
-/*
-int	main(void)
-{
-	char	*str;
-	int		i;
-	int		a;
-	int		*b;
-	int		n;
 
-	a = 74484485;
-	b = &a;
-	i = printf("Salut%x%x%x", 0, a);
-	printf("\n%d\n", i);
-	return (0);
-}
-*/
+// int	main(void)
+// {
+// 	char	*str;
+// 	int		i;
+// 	int		a;
+// 	int		*b;
+// 	int		n;
+
+// 	a = 74484485;
+// 	b = &a;
+// 	i = ft_printf("Salut%x%x%x", 0, a);
+// 	printf("\n%d\n", i);
+// 	return (0);
+// }

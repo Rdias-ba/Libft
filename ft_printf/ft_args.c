@@ -6,18 +6,18 @@
 /*   By: rdias-ba <rdias-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 10:39:18 by rdias-ba          #+#    #+#             */
-/*   Updated: 2023/02/08 10:40:46 by rdias-ba         ###   ########.fr       */
+/*   Updated: 2023/02/24 15:17:44 by rdias-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
 void	arg_c(va_list arg, t_len *len)
 {
 	int		c;
 
 	c = va_arg(arg, int);
-	ft_putchr(c + 0);
+	ft_putchar(c + 0);
 	len->total++;
 }
 
@@ -47,7 +47,7 @@ void	arg_d(int d, t_len *len)
 	else if (d < 0)
 	{
 		d *= -1;
-		ft_putchr('-');
+		ft_putchar('-');
 		len->total++;
 	}
 	if (d >= 10)
@@ -57,7 +57,7 @@ void	arg_d(int d, t_len *len)
 	}
 	else if (d <= 9)
 	{
-		ft_putchr(d + '0');
+		ft_putchar(d + '0');
 		len->total++;
 	}
 }
@@ -71,7 +71,7 @@ void	arg_u(unsigned int u, t_len *len)
 	}
 	else if (u <= 9)
 	{
-		ft_putchr(u + '0');
+		ft_putchar(u + '0');
 		len->total++;
 	}
 }
@@ -88,7 +88,7 @@ void	arg_x_lower(unsigned long long x, t_len *len)
 	}
 	else if (x <= 16)
 	{
-		ft_putchr(tab[x]);
+		ft_putchar(tab[x]);
 		len->total++;
 	}
 }

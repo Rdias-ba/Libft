@@ -6,11 +6,11 @@
 /*   By: rdias-ba <rdias-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 13:52:05 by rdias-ba          #+#    #+#             */
-/*   Updated: 2023/02/01 15:02:34 by rdias-ba         ###   ########.fr       */
+/*   Updated: 2023/02/24 15:17:46 by rdias-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
 void	arg_x_upper(unsigned int x, t_len *len)
 {
@@ -24,14 +24,14 @@ void	arg_x_upper(unsigned int x, t_len *len)
 	}
 	else if (x <= 16)
 	{
-		ft_putchr(tab[x]);
+		ft_putchar(tab[x]);
 		len->total++;
 	}
 }
 
 void	arg_pourcent(t_len *len)
 {
-	ft_putchr('%');
+	ft_putchar('%');
 	len->total++;
 }
 
