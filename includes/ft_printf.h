@@ -6,7 +6,7 @@
 /*   By: rdias-ba <rdias-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 14:26:00 by rdias-ba          #+#    #+#             */
-/*   Updated: 2023/02/24 15:21:21 by rdias-ba         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:04:43 by rdias-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ typedef struct s_len
 	int	total;
 }				t_len;
 
+int		ft_printf(const char *format, ...);
 void	arg_c(va_list arg, t_len *len);
 void	arg_s(va_list arg, t_len *len);
 void	arg_p(unsigned long long p, t_len *len);
