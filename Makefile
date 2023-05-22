@@ -6,7 +6,7 @@
 #    By: rdias-ba <rdias-ba@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/21 00:14:33 by rdias-ba          #+#    #+#              #
-#    Updated: 2023/02/27 18:14:01 by rdias-ba         ###   ########.fr        #
+#    Updated: 2023/05/19 16:59:02 by rdias-ba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRCS = ft_isdigit.c\
 		ft_strlcat.c\
 		ft_substr.c\
 		ft_atoi.c\
+		ft_atoll.c\
 		ft_itoa.c\
 		ft_putendl_fd.c\
 		ft_strlcpy.c\
@@ -40,6 +41,7 @@ SRCS = ft_isdigit.c\
 		ft_isalpha.c\
 		ft_memcpy.c\
 		ft_strchr.c\
+		ft_strstr.c\
 		ft_strnstr.c\
 		ft_isascii.c\
 		ft_memmove.c\
@@ -60,6 +62,7 @@ SRCS = ft_isdigit.c\
 		ft_args_next.c\
 		ft_args.c\
 		ft_printf.c\
+		get_next_line.c\
 
 INCLUDES = includes/
 SRCS_DIR = srcs/
